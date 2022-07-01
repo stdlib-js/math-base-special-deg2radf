@@ -24,32 +24,30 @@ limitations under the License.
 
 > Convert an angle from degrees to radians (single-precision).
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-deg2radf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-deg2radf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-deg2radf@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-deg2radf@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.deg2radf;
-})();
-</script>
+var deg2radf = require( '@stdlib/math-base-special-deg2radf' );
 ```
 
 #### deg2radf( x )
@@ -77,14 +75,9 @@ r = deg2radf( NaN );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-deg2radf@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var deg2radf = require( '@stdlib/math-base-special-deg2radf' );
 
 var d;
 var r;
@@ -95,11 +88,6 @@ for ( i = 0; i < 100; i++ ) {
     r = deg2radf( d );
     console.log( 'degrees: %d => radians: %d', d, r );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -108,7 +96,88 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/deg2radf.h"
+```
+
+#### stdlib_base_deg2radf( x )
+
+Converts an angle from degrees to radians (single-precision).
+
+```c
+float y = stdlib_base_deg2radf( 90.0f );
+// returns ~1.571f
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] float` input value.
+
+```c
+float stdlib_base_deg2radf( const float x );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/deg2radf.h"
+#include <stdio.h>
+
+int main() {
+    float x[] = { 45.0f, 90.0f, 0.0f, 0.0f/0.0f };
+
+    float y;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        y = stdlib_base_deg2radf( x[ i ] );
+        printf( "deg2radf(%f) = %f\n", x[ i ], y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -189,12 +258,13 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/math-base-special-deg2radf/tree/deno
 [umd-url]: https://github.com/stdlib-js/math-base-special-deg2radf/tree/umd
 [esm-url]: https://github.com/stdlib-js/math-base-special-deg2radf/tree/esm
+[branches-url]: https://github.com/stdlib-js/math-base-special-deg2radf/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-base-special-deg2radf/main/LICENSE
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/deg2rad]: https://github.com/stdlib-js/math-base-special-deg2rad/tree/umd
+[@stdlib/math/base/special/deg2rad]: https://github.com/stdlib-js/math-base-special-deg2rad
 
 <!-- </related-links> -->
 
