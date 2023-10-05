@@ -31,7 +31,7 @@ var deg2radf = require( './../../dist' );
 
 // FIXTURES //
 
-var data = require( './../..xtures/julia/data.json' );
+var data = require( './../fixtures/julia/data.json' );
 
 
 // TESTS //
