@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-deg2radf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convert an angle from degrees to radians (single-precision).",
   "license": "Apache-2.0",
   "author": {
@@ -40,15 +40,15 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/math-base-napi-unary": "^0.1.0",
-    "@stdlib/number-float64-base-to-float32": "^0.1.0",
+    "@stdlib/math-base-napi-unary": "^0.1.1",
+    "@stdlib/number-float64-base-to-float32": "^0.1.1",
     "@stdlib/utils-library-manifest": "^0.1.1"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.1.0",
-    "@stdlib/constants-float32-eps": "^0.1.0",
-    "@stdlib/constants-float32-ninf": "^0.1.0",
-    "@stdlib/constants-float32-pinf": "^0.1.0",
+    "@stdlib/constants-float32-eps": "^0.1.1",
+    "@stdlib/constants-float32-ninf": "^0.1.1",
+    "@stdlib/constants-float32-pinf": "^0.1.1",
     "@stdlib/math-base-assert-is-nanf": "^0.1.1",
     "@stdlib/math-base-special-absf": "^0.1.0",
     "@stdlib/random-base-randu": "^0.1.0",
