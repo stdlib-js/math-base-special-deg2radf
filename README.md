@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import deg2radf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-deg2radf@deno/mod.js';
+import deg2radf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-deg2radf@v0.1.1-deno/mod.js';
 ```
 
 #### deg2radf( x )
@@ -72,7 +72,7 @@ r = deg2radf( NaN );
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import deg2radf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-deg2radf@deno/mod.js';
+import deg2radf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-deg2radf@v0.1.1-deno/mod.js';
 
 var d;
 var r;
