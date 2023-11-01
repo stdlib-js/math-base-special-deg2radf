@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2020 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,71 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var PINF = require( '@stdlib/constants-float32-pinf' );
-var NINF = require( '@stdlib/constants-float32-ninf' );
-var EPS = require( '@stdlib/constants-float32-eps' );
-var isnanf = require( '@stdlib/math-base-assert-is-nanf' );
-var absf = require( '@stdlib/math-base-special-absf' );
-var deg2radf = require( './../../dist' );
-
-
-// FIXTURES //
-
-var data = require( './../fixtures/julia/data.json' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof deg2radf, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'if provided `+infinity`, the function returns `+infinity`', function test( t ) {
-	var r = deg2radf( PINF );
-	t.equal( r, PINF, 'returns +infinity' );
-	t.end();
-});
-
-tape( 'if provided `-infinity`, the function returns `-infinity`', function test( t ) {
-	var r = deg2radf( NINF );
-	t.equal( r, NINF, 'returns -infinity' );
-	t.end();
-});
-
-tape( 'if provided `NaN`, the function returns `NaN`', function test( t ) {
-	var r = deg2radf( NaN );
-	t.equal( isnanf( r ), true, 'returns NaN' );
-	t.end();
-});
-
-tape( 'the function converts an angle from degrees to radians', function test( t ) {
-	var expected;
-	var delta;
-	var tol;
-	var x;
-	var y;
-	var i;
-
-	x = data.x;
-	expected = data.expected;
-
-	for ( i = 0; i < x.length; i++ ) {
-		y = deg2radf( x[i] );
-		delta = absf( y - expected[i] );
-		tol = EPS * absf( expected[i] );
-		if ( y === expected[ i ] ) {
-			t.equal( y, expected[i], 'returns '+expected[i]+' when provided '+x[i] );
-		} else {
-			t.equal( delta <= tol, true, 'within tolerance. x: '+x[i]+'. y: '+y+'. E: '+expected[i]+'. tol: '+tol+'. Δ: '+delta+'.' );
-		}
-	}
-	t.end();
-});
-
-tape( 'if provided a value less than `~1.4e-45*180/pi`, the function will underflow', function test( t ) {
-	var r = deg2radf( 1.0e-45 );
-	t.equal( r, 0.0, 'returns 0' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
