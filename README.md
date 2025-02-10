@@ -201,6 +201,7 @@ int main( void ) {
 ## See Also
 
 -   <span class="package-name">[`@stdlib/math-base/special/deg2rad`][@stdlib/math/base/special/deg2rad]</span><span class="delimiter">: </span><span class="description">convert an angle from degrees to radians.</span>
+-   <span class="package-name">[`@stdlib/math-base/special/rad2degf`][@stdlib/math/base/special/rad2degf]</span><span class="delimiter">: </span><span class="description">convert an angle from radians to degrees (single-precision).</span>
 
 </section>
 
@@ -232,7 +233,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -281,6 +282,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 <!-- <related-links> -->
 
 [@stdlib/math/base/special/deg2rad]: https://github.com/stdlib-js/math-base-special-deg2rad
+
+[@stdlib/math/base/special/rad2degf]: https://github.com/stdlib-js/math-base-special-rad2degf
 
 <!-- </related-links> -->
 
